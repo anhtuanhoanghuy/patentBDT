@@ -1,0 +1,247 @@
+:root{
+    font-size: 15px;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+body{
+    background-color:rgb(242,252,254);
+    position: relative;
+}
+#title{
+  color: #132a7b;
+  font-size: 40px;
+  margin-top: 30px;
+}
+#title {
+  text-align: center;
+}
+#weather{
+    margin-top: 20px;
+    margin-left: 80px;
+}
+#name{
+    font-weight: bold;
+    color: #1848cc;
+}
+#info{
+    display: flex;
+}
+#icon{
+    width: 100px;
+}
+#details{
+    width: 120px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    color:#1848cc;
+}
+#currentTime {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    /* display: inline-block; */
+    max-width:100%;
+    height: auto;
+    background-color: #73C0FC;
+    padding: 10px;
+    border-radius: 10px;
+    color:#bd6610;
+    font-size: 16px;
+    font-weight: bold;
+}
+.header{
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+#chart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#chart-container1,#chart-container2,#chart-container3,#chart-container4 {
+    margin: 40px 40px 60px 40px;
+    overflow: hidden;
+    flex-basis: 50%;
+}
+
+.data-value {
+    color: black;
+    width: 150px;
+    height: 40px;
+    background-color: #05060f0a;
+    border-radius: .5rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+  }
+  
+span{
+    display: inline-block;
+    width: 135px;
+}
+
+#container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+
+#map{
+  width:600px;
+  height:400px;
+  margin-inline-end: 80px;
+  max-width: 100%;
+  margin: 40px 40px 60px 40px;
+  overflow: hidden;
+}
+
+
+
+.data-container1,.data-container2,.data-container3,.data-container4,.data-container5,.data-container6 {
+    margin: 20px 80px;
+    display: flex;
+}
+
+  .button-cover {
+    height: 100px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px -8px #c5d6d6;
+    border-radius: 4px;
+  }
+  
+  .button-cover:before {
+    counter-increment: button-counter;
+    content: counter(button-counter);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #d7e3e3;
+    font-size: 12px;
+    line-height: 1;
+    padding: 5px;
+  }
+  
+  .button-cover,
+  .knobs,
+  .layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .button {
+    position: relative;
+    width: 74px;
+    height: 36px;
+    margin: 5px 0px 0px 20px;
+    overflow: hidden;    
+  }
+  
+  .checkbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+  }
+  
+  .knobs {
+    z-index: 2;
+  }
+  
+  .layer {
+    width: 100%;
+    background-color: #d7f2fe;
+    transition: 0.3s ease all;
+    z-index: 1;
+  }
+  
+  .button,
+  .button .layer {
+    border-radius: 100px;
+  }
+  
+  .button .knobs:before {
+    content: "ON";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 10px;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    background-color: #00aeff;
+    border-radius: 50%;
+    transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+  }
+  
+  .button .checkbox:active + .knobs:before {
+    width: 46px;
+    border-radius: 100px;
+  }
+  
+  .button .checkbox:checked:active + .knobs:before {
+    margin-left: -26px;
+  }
+  
+  .button .checkbox:checked + .knobs:before {
+    content: "OFF";
+    left: 42px;
+    background-color: #f44336;
+  }
+  
+  .button .checkbox:checked ~ .layer {
+    background-color: #fcebeb;
+  }
+
+@media only screen and (max-width: 450px) {
+    #chart-container1,#chart-container2,#chart-container3,#chart-container4 {
+        flex-basis: 100%;
+        flex-wrap: nowrap;
+        width:300px;
+        height: 200px;
+        margin-bottom: 5px;
+    }
+    #currentTime{
+        visibility:collapse;
+    }
+    #map{
+      width: 300px;
+      height: 200px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    #chart-container1,#chart-container2,#chart-container3,#chart-container4 {
+        flex-basis: 50%;
+    }
+    #currentTime{
+        visibility:collapse;
+    }
+    #map{
+      width: 300px;
+      height: 200px;
+    }
+}
+

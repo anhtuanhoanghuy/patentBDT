@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=getMap&key=ApmjZMScf3QndIcQhYNlkzZrFokZjkqUjGE6y-3Y00-sJdpjwUvoVDlaEFQPjctJ' async defer></script>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>DA18 VinIF</title>
+</head>
+<body>
+    <img class="header" src="header.jpg" alt="">
+    <h1 id ="title">Dữ liệu khảo sát về nước (VINIF.2020.DA18)</h1>
+    <div id = "weather">
+        <div id = "name"></div>
+        <div id ="info">
+            <img id="icon" src="" alt="Weather icon">
+            <div id = "details">
+                <p id = "temp"></p>
+                <p id = "humid"></p>
+                <p id = "description"></p>
+            </div>
+        </div>
+    </div>
+    <div id="currentTime"></div>
+    <div id="container">
+        <div class="data-container">
+            <div class="data-container1">
+                <div>
+                    <span class="label">RSSI:</span>
+                    <input autocomplete="off" name="data-value1" id="data-value1" class="data-value" disabled>
+                </div>
+            </div>
+            <div class="data-container2">
+                <div>
+                    <span class="labe2">Vị trí GPS:</span>
+                    <input autocomplete="off" name="data-value1" id="data-value2" class="data-value" disabled>
+                </div>
+            </div>
+            <div class="data-container3">
+                <div>
+                    <span class="labe3">Giá trị Nhiệt độ:</span>
+                    <input autocomplete="off" name="data-value3" id="data-value3" class="data-value" disabled>
+                </div>
+                <div id="button" class="button">
+                    <input id="button-3" class="checkbox" type="checkbox">
+                    <div class="knobs"></div>
+                    <div class="layer"></div>
+                </div>
+            </div>
+            <div class="data-container4">
+                <div>
+                    <span class="labe4">Giá trị Độ mặn:</span>
+                    <input autocomplete="off" name="data-value4" id="data-value4" class="data-value" disabled>
+                </div>
+                <div id="button" class="button">
+                    <input id="button-4" class="checkbox" type="checkbox">
+                    <div class="knobs"></div>
+                    <div class="layer"></div>
+                </div>
+            </div>
+            <div class="data-container5">
+                <div>
+                    <span class="label">Giá trị Độ dẫn:</span>
+                    <input autocomplete="off" name="data-value5" id="data-value5" class="data-value" disabled>
+                </div>
+                <div id="button" class="button">
+                    <input id="button-5" class="checkbox" type="checkbox">
+                    <div class="knobs"></div>
+                    <div class="layer"></div>
+                </div>
+            </div>
+            <div class="data-container6">
+                <div>
+                    <span class="label">Giá trị Nồng độ Ion:</span>
+                    <input autocomplete="off" name="data-value6" id="data-value6" class="data-value" disabled>
+                </div>
+                <div id="button" class="button">
+                    <input id="button-6" class="checkbox" type="checkbox">
+                    <div class="knobs"></div>
+                    <div class="layer"></div>
+                </div>
+            </div>
+        </div>
+        <div id="map" ></div>
+    </div>
+    
+    <div id="chart-container">
+        <div class="chart-container">
+            <div id="chart-container1"></div>
+            <div id="chart-container2"></div>
+        </div>
+        <div class="chart-container">
+            <div id="chart-container3"></div>
+            <div id="chart-container4"></div>
+            <div id="chart-container6" style="display: none;"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="CurrentTime.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script src="javascript.js" type="text/javascript" async></script>
+    <script type="text/javascript" src="https://thingspeak.com/highcharts-3.0.8.js"></script>
+</body>
+</html>
