@@ -16,9 +16,9 @@ var chart_container2 = 'chart-container2';
 var chart_title2 = 'Dữ liệu Độ mặn';
 var field2_number = 2;
 var field2_color = '#00aaff';
-var y_axis_title2 = 'Độ mặn (S' + String.fromCharCode(8240) + ')';
+var y_axis_title2 = 'Độ mặn (ppt)';
 var id_input2 = '#data-value4';
-var unit2 = 'S' + String.fromCharCode(8240);
+var unit2 = 'ppt';
 
 // variables for the third series
 var chart_container3 = 'chart-container3';
@@ -59,7 +59,7 @@ $(document).ready(function() {
   var chart1 = addChart(chart_container1, chart_title1,y_axis_title1);
   addSeries(field1_number, field1_color,chart1,id_input1,unit1);
   // add the second series
-  var chart2 = addChart(chart_container2, chart_title2,y_axis_title4);
+  var chart2 = addChart(chart_container2, chart_title2,y_axis_title2);
   addSeries(field2_number, field2_color, chart2,id_input2,unit2);
   // add the third series
   var chart3 = addChart(chart_container3, chart_title3,y_axis_title3);
